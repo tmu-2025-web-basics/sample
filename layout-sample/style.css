@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lavender;
+}
+
+a {
+  text-decoration: none;
+}
+
+header, 
+nav, 
+main, 
+footer {
+  width: 900px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+header {
+  background-color: beige;
+  padding: 3em;
+}
+
+nav {
+  background-color: dimgray;
+}
+nav a {
+  color: white;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  flex: 1;
+  text-align: center;
+  border: 1px solid white;
+  padding: 1em;
+}
+nav ul li.on {
+  background-color: white;
+}
+nav ul li.on a {
+  color: black;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+.photo:hover {
+  transform: scale(1.1);
+}
+
+main div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer {
+  background-color: gainsboro;
+  padding: 3em;
+}
+
+main a:nth-of-type(5) .photo {
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation { /* 「rotation」の定義。0度回転から360回転まで */
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
